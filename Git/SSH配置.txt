@@ -1,0 +1,16 @@
+要使用 SSH 协议拉取代码，你可以按照以下步骤进行设置：
+
+生成 SSH 密钥：如果你还没有生成 SSH 密钥，请首先生成一个。在终端中执行以下命令：
+
+ssh-keygen -t rsa -b 4096 -C "your-email@example.com"
+这将生成一对公钥和私钥。按照提示输入保存密钥的路径和密码（可选择）。
+
+添加公钥到 GitHub：将生成的公钥添加到你的 GitHub 账户中。复制公钥的内容（通常在 ~/.ssh/id_rsa.pub 文件中），然后打开 GitHub 网站，进入 Settings > SSH and GPG keys，点击 "New SSH key" 添加你的公钥。
+
+git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"
+
+4：拉取代码：现在你可以使用 SSH 协议克隆或拉取代码。找到你想要克隆的项目，点击项目主页上的 "Code" 按钮，选择 "SSH"，复制 SSH 链接，并在终端中执行以下命令来克隆项目：
+
+git clone git@github.com:your-username/your-repo.git
+这样就可以使用 SSH 协议进行代码拉取了
